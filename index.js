@@ -15,8 +15,7 @@ function process(filename) {
     // create emitter
     const myEmitter = new EventEmitter();
 
-    // emit start
-    myEmitter.emit('start');
+
 
     const stream = fs.createReadStream(filename, {encoding: 'utf-8'});
 
@@ -26,6 +25,10 @@ function process(filename) {
         buf += chunk;
     });
 
+    stream.on('readable', function () {
+        myEmitter.emit('start');
+    });
+    
     stream.on('error', function () {
         myEmitter.emit('error');
     });
