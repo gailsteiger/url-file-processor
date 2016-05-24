@@ -1,0 +1,15 @@
+{
+  "name": "url-file-processor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "url-validator": "https://github.com/gailsteiger/url-validator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
